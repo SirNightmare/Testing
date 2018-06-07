@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const client = new Discord.Client();
 let bot = new Discord.Client();
-var prefix = "$"
+var prefix = "b!"
 module.exports.run = async (bot, message, args, settings) => {
   var embed = new Discord.RichEmbed()
   .setColor(0x700FF)

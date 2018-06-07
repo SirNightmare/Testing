@@ -5,16 +5,29 @@ const Music = require('discord.js-musicbot-addon');
 const settings = require("./settings.json");
 
 Music.start(bot, {
-youtubeKey: "AIzaSyChV72AqgUOWab694WT3zdK6EIbY0EGRuc",
-  prefix: settings.prefix, // Prefix for the commands.
-  global: false,            // Non-server-specific queues.
-  maxQueueSize: 50,        // Maximum queue size of 25.
-  clearInvoker: true,      // If permissions applicable, allow the bot to delete the messages that invoke it.
-  helpCmd: 'mhelp',        // Sets the name for the help command.
-  playCmd: 'play',        // Sets the name for the 'play' command.
-  volumeCmd: 'adjust',     // Sets the name for the 'volume' command.
-  leaveCmd: 'leave',      // Sets the name for the 'leave' command.
-  disableLoop: false        // Disable the loop command.
+  youtubeKey: "AIzaSyChV72AqgUOWab694WT3zdK6EIbY0EGRuc",
+   prefix: "b!",
+    helpCmd: "mhelp",
+    global: false,
+    maxQueueSize: 50,
+    playCmd: 'music',
+    playAlts: ["music", 'moosic'],
+    volumeCmd: 'vol',
+    thumbnailType: 'high',
+    leaveCmd: 'leave',
+    anyoneCanSkip: true,
+    disableLoop: false,
+    searchCmd: 'search',
+    requesterName: true,
+    inlineEmbeds: true,
+    queueCmd: 'queue',
+    queueAlts: ['queue', 'queueue'],
+    pauseCmd: 'pause',
+    resumeCmd: 'resume',
+    skipCmd: 'skip',
+    skipAlts: ["skip", "skipp"],
+    loopCmd: 'loop',
+    enableQueueStat: true,
 });
 
 var google = `<@409751964662890508>`
@@ -63,4 +76,4 @@ bot.on("message", async message => {
     if(cmd) cmd.run(bot, message, args);
 
       });
-bot.login(process.env.BOT_TOKEN);
+bot.login("NDUzOTcwMTUyNjIzNzAyMDI2.DfmoLg.Lr9G3txiP6JaGE5d9sqKcHG8XdU");
